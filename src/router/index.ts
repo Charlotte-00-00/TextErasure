@@ -191,7 +191,7 @@ const router = createRouter({
     history: createWebHashHistory(),
     routes,
 });
-
+:!
 //这是一个全局的前置守卫。每当导航触发时，全局前置守卫按创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 resolve 完之前一直处于 等待中。
 router.beforeEach((to, from, next) => {
     NProgress.start(); // 启动某种进度条或加载指示器的命令。
