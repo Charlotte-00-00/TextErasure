@@ -1,19 +1,42 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import { usePermissStore } from '../store/permiss';
-import Home from '../views/home.vue';
-import NProgress from 'nprogress'
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'; // 创建路由实例和指定路由模式 ;路由记录的类
+import { usePermissStore } from '../store/permiss'; //权限管理
+import NProgress from 'nprogress' //显示页面顶部的进度条,表示页面加载或路由导航进度
 import 'nprogress/nprogress.css'
+import Home from "../views/home.vue"; // nprogress 的 CSS 样式
 
 const routes: RouteRecordRaw[] = [
     {
         path: '/',
-        redirect: '/dashboard',
+        redirect: '/MainPage',
     },
+
+    {
+        path: '/MainPage',
+        name: 'MainPage',
+        meta: {
+            title: 'MainPage',
+        },
+        component: () => import(/* webpackChunkName: "main" */ '../views/MainPage.vue'), // 假设 MainPage 组件位于此路径
+    },
+    // 可以在这里添加 MainPage 的其他子路由
+
+    {
+        path: '/Input',
+        name: 'Input',
+        meta: {
+            title: 'Input',
+            permiss: '2',
+        },
+        component: () => import(/* webpackChunkName: "Input" */ '../views/Input.vue'),
+    },
+
+
     {
         path: '/',
         name: 'Home',
         component: Home,
         children: [
+
             {
                 path: '/dashboard',
                 name: 'dashboard',
@@ -141,45 +164,59 @@ const routes: RouteRecordRaw[] = [
             },
         ],
     },
+
     {
-        path: '/login',
-        name: 'Login',
-        meta: {
-            title: '登录',
-        },
-        component: () => import(/* webpackChunkName: "login" */ '../views/login.vue'),
-    },
-    {
-        path: '/403',
-        name: '403',
-        meta: {
-            title: '没有权限',
-        },
-        component: () => import(/* webpackChunkName: "403" */ '../views/403.vue'),
-    },
-];
+                path: '/403',
+                name: '403',
+                meta: {
+                    title: '没有权限',
+                },
+                component: () => import(/* webpackChunkName: "403" */ '../views/403.vue'),
+            },
+
+            {
+                path: '/RegistrationForm',
+                name: 'RegistrationForm',
+                meta: {
+                    title: '登录',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../views/RegistrationForm.vue'),
+            }
+
+    ];
+
 
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
 });
 
+//这是一个全局的前置守卫。每当导航触发时，全局前置守卫按创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 resolve 完之前一直处于 等待中。
 router.beforeEach((to, from, next) => {
-    NProgress.start();
-    const role = localStorage.getItem('ms_username');
-    const permiss = usePermissStore();
-    if (!role && to.path !== '/login') {
-        next('/login');
+    NProgress.start(); // 启动某种进度条或加载指示器的命令。
+    // 检查是否是公共页面，如果是则直接跳过登录和权限检查
+    if (to.path === '/MainPage') {
+        next();
+        return;
+    }
+    const role = localStorage.getItem('ms_username'); // 使用 localStorage 来获取登录用户的角色。
+    const permiss = usePermissStore(); //使用状态管理库（如 Pinia）来为 permissStore 的 store 中获取权限信息。
+
+    if (!role && to.path !== '/RegistrationForm') {  // 如果没有登录且不是要跳转到注册页面，则重定向到注册页面
+        next('/RegistrationForm');
     } else if (to.meta.permiss && !permiss.key.includes(to.meta.permiss)) {
-        // 如果没有权限，则进入403
+        // 如果没有权限，则重定向到403页面
         next('/403');
     } else {
-        next();
+        next(); // 所有检查都通过，允许导航
     }
 });
 
-router.afterEach(() => {
-    NProgress.done()
+
+
+router.afterEach(() => {   // 配置路由历史模式,创建了一个基于哈希模式的历史记录
+    NProgress.done()// 完成导航后，结束进度条或加载指示器
 })
 
 export default router;

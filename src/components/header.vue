@@ -43,6 +43,8 @@
 		</div>
 	</div>
 </template>
+
+
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useSidebarStore } from '../store/sidebar';
@@ -75,6 +77,7 @@ const handleCommand = (command: string) => {
 	}
 };
 </script>
+
 <style scoped>
 .header {
 	position: relative;
