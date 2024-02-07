@@ -17,10 +17,13 @@
       <!-- 创建一个滚动容器 -->
       <div class="scroll-container">
         <!-- 布局头部 -->
-        <div class="section">
+
         <Banner />
         <Navigation />
-        <Frame1 />
+        <div class="section">
+          <div class="section-shadow">
+            <Frame1 />
+          </div>
         </div>
         <Category />
         <Testimonial />
@@ -43,10 +46,18 @@
 }
 
 .section {
-  padding-bottom: 68px;
+
   background-image: url('../assets/img/ffe7fbbff928a639566523362a584959.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
+}
+
+
+.section-shadow {
+  padding-bottom: 18px;
+  background-color: #f1f2f499;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 </style>

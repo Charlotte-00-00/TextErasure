@@ -1,18 +1,47 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "strict": false,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": false, // 根据需要开启或关闭严格模式
     "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true, // 如果你的项目使用装饰器，请保留此选项
+    "allowJs": true, // 如果你的项目中包含JS文件，请保留此选项
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true
+    "allowSyntheticDefaultImports": true, // 如果你的项目依赖默认导入，请保留此选项
+    "resolveJsonModule": true, // 如果你需要从JSON文件中导入数据，请添加此选项
+    "isolatedModules": true, // 如果你的项目需要确保文件可以作为孤立模块编译，请添加此选项
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "types": [
+      "webpack-env" // 如果你的项目在webpack环境中构建，并且需要这些类型定义，请保留此选项
+    ],
+    "paths": {
+      "@/*": [
+        "src/*" // 路径别名，根据你的项目结构进行调整
+      ]
+    },
+    "lib": [ // 根据你的项目需要的库文件进行调整
+      "esnext",
+      "dom",
+      "dom.iterable",
+       "scripthost",
+      "es2015", "dom"
+    ]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts","src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [ // 合并了两个配置中的include规则，请根据你的项目结构进行调整
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.d.ts", // 添加了.d.ts文件的包含规则
+     "tests/**/*.ts", // 如果你需要包含测试文件，请取消注释这一行（以及下一行）
+     "tests/**/*.tsx" // 同上
+  ],
+  "exclude": [ // 保留排除规则，根据你的项目需要进行调整
+    "node_modules"
+  ],
+  // 如果你的项目需要引用其他tsconfig文件，请保留以下部分，并根据实际情况进行调整
+   "references": [{ "path": "./tsconfig.node.json" }]
 }

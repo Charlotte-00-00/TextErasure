@@ -19,18 +19,6 @@ const routes: RouteRecordRaw[] = [
         component: () => import(/* webpackChunkName: "main" */ '../views/MainPage.vue'), // 假设 MainPage 组件位于此路径
     },
     // 可以在这里添加 MainPage 的其他子路由
-
-    {
-        path: '/Input',
-        name: 'Input',
-        meta: {
-            title: 'Input',
-            permiss: '2',
-        },
-        component: () => import(/* webpackChunkName: "Input" */ '../views/Input.vue'),
-    },
-
-
     {
         path: '/',
         name: 'Home',
@@ -182,7 +170,113 @@ const routes: RouteRecordRaw[] = [
                 },
 
                 component: () => import(/* webpackChunkName: "login" */ '../views/RegistrationForm.vue'),
+            },
+
+            {
+                path: '/main_features',
+                name: 'main_features',
+                meta: {
+                    title: '主要功能',
+                },
+                component: () => import('../views/main_features/MainContent.vue'),
+                children: [
+                    {
+                        path: '/HelloWorld',
+                        component: () => import('../components/HelloWorld.vue')
+                    },
+                    {
+                        path: '/paddle-ocr',
+                        component: () => import('../components/paddle/textOcrPage.vue')
+                    },
+
+                    {
+                        path: '/html-editor',
+                        name: 'HTML-EDITOR',
+                        component: () => import('../components/editor/htmlEditor.vue')
+                    },
+                ]
+            },
+
+            {
+                path: '/Clipboard',
+                name: 'Clipboard',
+                meta: {
+                    title: '写字板',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/Clipboard.vue'),
+            },
+
+            {
+                path: '/DecimalConversion',
+                name: 'DecimalConversion',
+                meta: {
+                    title: '进制转换',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/DecimalConversion.vue'),
+            },
+
+            {
+                path: '/ImgCompress',
+                name: 'ImgCompress',
+                meta: {
+                    title: '图片压缩',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/ImgCompress.vue'),
+            },
+
+            {
+                path: '/ImgWatermark',
+                name: 'ImgWatermark',
+                meta: {
+                    title: '图片加水印',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/ImgWatermark.vue'),
+            },
+
+            {
+                path: '/WeightConversion',
+                name: 'WeightConversion',
+                meta: {
+                    title: '单位转换',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/WeightConversion.vue'),
+            },
+
+            {
+                path: '/CharacterCount',
+                name: 'CharacterCount',
+                meta: {
+                    title: '字符计数器',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/CharacterCount.vue'),
+            },
+
+            {
+                path: '/ComprehensiveCalculation',
+                name: 'ComprehensiveCalculation',
+                meta: {
+                    title: '综合计算器',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/ComprehensiveCalculation.vue'),
+            },
+
+            {
+                path: '/QuickCopy',
+                name: 'QuickCopy',
+                meta: {
+                    title: '页面检测工具',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../components/Category/QuickCopy.vue'),
             }
+
 
     ];
 
@@ -190,8 +284,8 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
     history: createWebHashHistory(),
     routes,
-});
-:!
+})
+
 //这是一个全局的前置守卫。每当导航触发时，全局前置守卫按创建顺序调用。守卫是异步解析执行，此时导航在所有守卫 resolve 完之前一直处于 等待中。
 router.beforeEach((to, from, next) => {
     NProgress.start(); // 启动某种进度条或加载指示器的命令。

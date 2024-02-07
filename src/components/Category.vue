@@ -15,25 +15,25 @@
       <div class="flex-col" >
         <div class="section " @click="jump1">
           <img class="image self-center" src="../assets/img/Icon1.png" />
-            <span class="font text ml-text">写字板</span>
+          <span class="font text ml-text">写字板</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump2">
           <img class="image self-center" src="../assets/img/Icon2.png" />
-          <span class="font text ml-text">中国色</span>
+          <span class="font text ml-text">进制转换</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump3">
           <img class="image self-center" src="../assets/img/Icon3.png" />
-          <span class="font text ml-text">综合计算器</span>
+          <span class="font text ml-text">图片压缩</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump4">
           <img class="image self-center" src="../assets/img/Icon4.png" />
-          <span class="font text ml-text">计数器</span>
+          <span class="font text ml-text">图片加水印</span>
         </div>
       </div>
     </div>
@@ -43,25 +43,25 @@
       <div class="flex-col">
         <div class="section" @click="jump5">
           <img class="image self-center" src="../assets/img/Icon5.png" />
-            <span class="font text ml-text">图片比较</span>
+          <span class="font text ml-text">单位转换</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump6">
           <img class="image self-center" src="../assets/img/Icon6.png" />
-          <span class="font text ml-text">添加图片水印</span>
+          <span class="font text ml-text">字符计数器</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump7">
           <img class="image self-center" src="../assets/img/Icon7.png" />
-          <span class="font text ml-text">快速复制</span>
+          <span class="font text ml-text">综合计算器</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump8">
           <img class="image self-center" src="../assets/img/Icon8.png" />
-          <span class="font text ml-text">文字比较器</span>
+          <span class="font text ml-text">快速复制</span>
         </div>
       </div>
     </div>
@@ -159,25 +159,25 @@ export default{
       this.$router.push('/Tablet')
     },
     jump2() {
-      this.$router.push('/ChinaColors')
+      this.$router.push('/DecimalConversion')
     },
     jump3(){
-      this.$router.push('/ComprehensiveCalculation')
-    },
-    jump4(){
-      this.$router.push('/Countdown')
-    },
-    jump5(){
       this.$router.push('/ImgCompress')
     },
-    jump6(){
+    jump4(){
       this.$router.push('/ImgWatermark')
     },
+    jump5(){
+      this.$router.push('/WeightConversion')
+    },
+    jump6(){
+      this.$router.push('/CharacterCount')
+    },
     jump7(){
-      this.$router.push('/QuickCopy')
+      this.$router.push('/ComprehensiveCalculation')
     },
     jump8(){
-      this.$router.push('/TextComparison')
+      this.$router.push('/QuickCopy')
     },
   }
 }
