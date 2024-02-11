@@ -14,25 +14,25 @@
     <div class="flex-row">
       <div class="flex-col" >
         <div class="section " @click="jump1">
-          <img class="image self-center" src="../assets/img/Icon1.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon1.png" />
           <span class="font text ml-text">写字板</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump2">
-          <img class="image self-center" src="../assets/img/Icon2.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon2.png" />
           <span class="font text ml-text">进制转换</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump3">
-          <img class="image self-center" src="../assets/img/Icon3.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon3.png" />
           <span class="font text ml-text">图片压缩</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump4">
-          <img class="image self-center" src="../assets/img/Icon4.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon4.png" />
           <span class="font text ml-text">图片加水印</span>
         </div>
       </div>
@@ -42,25 +42,25 @@
     <div class="flex-row">
       <div class="flex-col">
         <div class="section" @click="jump5">
-          <img class="image self-center" src="../assets/img/Icon5.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon5.png" />
           <span class="font text ml-text">单位转换</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump6">
-          <img class="image self-center" src="../assets/img/Icon6.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon6.png" />
           <span class="font text ml-text">字符计数器</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump7">
-          <img class="image self-center" src="../assets/img/Icon7.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon7.png" />
           <span class="font text ml-text">综合计算器</span>
         </div>
       </div>
       <div class="flex-col">
         <div class="section" @click="jump8">
-          <img class="image self-center" src="../assets/img/Icon8.png" />
+          <img class="image self-center" src="../assets/img/Category/Icon8.png" />
           <span class="font text ml-text">快速复制</span>
         </div>
       </div>
