@@ -9,20 +9,20 @@
   import Section3 from '../components/Section 3.vue';          // 联系栏
   import Frame2 from "../components/Frame 2.vue";              // 讨论组
   import Footer from "../components/Footer.vue";               // 底栏
+  import FloatingWindow from '../components/FloatingWindow.vue';  // 导入悬浮窗组件
 </script>
 
-  <!-- App.vue  -->
+<!--   App.vue  -->
   <template>
     <div>
-      <!-- 创建一个滚动容器 -->
-      <div class="scroll-container">
-        <!-- 布局头部 -->
-
+<!--       创建一个滚动容器 -->
+      <div class="scroll-container" ref="scrollContainerRef">
+<!--         布局头部 -->
         <Banner />
         <Navigation />
-        <div class="section">
-          <div class="section-shadow">
-            <Frame1 />
+        <div class="section">  <!-- 主功能页添加图片背景-->
+          <div class="section-shadow">  <!-- 添加阴影-->
+              <Frame1 />
           </div>
         </div>
         <Category />
@@ -33,11 +33,15 @@
         <Frame2 />
         <Footer />
       </div>
+        <FloatingWindow />
     </div>
   </template>
 
 
-<style scoped>
+
+
+<style lang="scss" scoped>
+
 /* 添加样式以实现滚动效果 */
 .scroll-container {
   height: 100vh; /* 或其他合适的高度值 */

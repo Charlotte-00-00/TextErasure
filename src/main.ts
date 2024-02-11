@@ -16,12 +16,15 @@ import ElementPlus from 'element-plus'
 
 const app = createApp(App);
 
+
 app.use(createPinia());
 app.use(router);
 app.use(ElementPlus)
 
 // app.use(quillEditor)
 nprogress.configure({showSpinner: false})
+
+
 
 router.beforeEach((to, from, next) => {
     nprogress.start()

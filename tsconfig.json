@@ -16,7 +16,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env" // 如果你的项目在webpack环境中构建，并且需要这些类型定义，请保留此选项
+      "node" // 如果你的项目在webpack环境中构建，并且需要这些类型定义，请保留此选项
     ],
     "paths": {
       "@/*": [
@@ -40,7 +40,7 @@
      "tests/**/*.tsx" // 同上
   ],
   "exclude": [ // 保留排除规则，根据你的项目需要进行调整
-    "node_modules"
+
   ],
   // 如果你的项目需要引用其他tsconfig文件，请保留以下部分，并根据实际情况进行调整
    "references": [{ "path": "./tsconfig.node.json" }]
