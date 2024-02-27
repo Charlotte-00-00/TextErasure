@@ -107,7 +107,6 @@ const router = useRouter();
         </div>
       </div>
     </div>
-    <img class="self-end image_12" src="../assets/img/d4a2b8b066ad667e45b6275d52b498db.png" />
   </div>
 </template>
 
@@ -134,7 +133,7 @@ const router = useRouter();
 .group_32 {
   margin-top: 77.5px;
   padding: 0 321.5px 98px 321.5px;
-  height: 2335.5px;
+  height: 1200px;
 }
 .group_33 {
   padding-bottom: 182px;
@@ -253,10 +252,5 @@ const router = useRouter();
   word-break: break-all;
   width: 262.5px;
 }
-.image_12 {
-  margin-right: 30.5px;
-  margin-top: 82px;
-  width: 1056px;
-  height: 1080px;
-}
+
 </style>

@@ -101,7 +101,7 @@ const data: Tree[] = [
 	},
 	{
 		id: '14',
-		label: '支持作者'
+		label: '其他'
 	}
 ];
 

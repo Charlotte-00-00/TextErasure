@@ -5,6 +5,7 @@
   import Category from "../components/Category.vue";           // 工具箱
   import Testimonial from "../components/Testimonial.vue";     //  用户评价
   import Section1 from '../components/Section 1.vue';          // 介绍1--自定义错题
+  import RoadMap  from "../components/RoadMap.vue";
   import Section2 from '../components/Section 2.vue';          // 合作商
   import Section3 from '../components/Section 3.vue';          // 联系栏
   import OurTeams from "../components/OurTeams.vue";           // 我们的团队
@@ -32,9 +33,9 @@
         <Testimonial />
         <Section1 />
         <Section2 />
+        <RoadMap/>
         <Section3 />
         <OurTeams/>
-
         <MessageBoard/>
         <news/>
         <Frame2 />

@@ -97,7 +97,7 @@ export default {
 
 }
 .section_6 {
-  padding-top: 80px;
+  padding-top: 90px;
 
 
 
@@ -109,7 +109,7 @@ export default {
 .group_9 {
   padding-bottom: 32.5px;
   overflow: hidden;
-  width: 600px;
+  width: 650px;
   height: 400px;
 }
 .group_8 {
