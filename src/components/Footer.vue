@@ -10,300 +10,221 @@ const router = useRouter();
 </script>
 
 <template>
-  <div class="flex-col section_24">
-    <div class="flex-row justify-between items-center group_59">
-      <div class="flex-row">
-        <div class="flex-col self-start group_60">
-          <div class="flex-row self-start group_61">
-            <span class="font_23 text_55 text_95">Call now:</span>
-            <span class="font_23 text_96 ml-3">(86) 555-0115</span>
-          </div>
-          <span class="mt-14 self-stretch font_25">
-          6391 Elgin St. Celina, Delaware 10299, New York, United States of America
-        </span>
-        </div>
-        <div class="flex-col group_62 ml-110">
-          <span class="self-stretch font_24 text_97">Quick Link</span>
-          <div class="mt-14 flex-col self-start group_67">
-            <div class="flex-col justify-start items-center self-start text-wrapper_25">
-              <span class="font_26 text_103">About</span>
-            </div>
-            <div class="mt-4 flex-col justify-start items-center self-stretch text-wrapper_27">
-              <span class="text_108">Contact</span>
-            </div>
-            <div class="mt-4 flex-col justify-start items-center self-start text-wrapper_29">
-              <span class="font_5 text_112">Pricing</span>
-            </div>
-            <div class="mt-4 flex-col justify-start items-center self-start text-wrapper_30">
-              <span class="font_5 text_114">Blog</span>
-            </div>
-          </div>
-        </div>
+  <div class="flex-row relative group">
+    <div class="flex-row pos">
+      <span class="font text">盐城工学院版权所有</span>
+      <span class="font text_2">(86)-515-8816866</span>
+    </div>
+    <span class="text_3 pos_2">
+    邮编：224051 地址：（江苏省盐城市希望大道中路1号） copyright:yancheng istitute of technology 2024
+  </span>
+    <div class="flex-row justify-end group_12 pos_3">
+      <span class="font_4 text_4">email：894508104@qq.com</span>
+      <span class="ml-28 font_4 text_5">email：2044237586@qq.com</span>
+      <span class="ml-28 font_4 text_6">email：2519219745@qq.com</span>
+      <span class="ml-28 font_4">email：160031194@qq.com</span>
+    </div>
+    <div class="flex-row equal-division group_4">
+      <div class="flex-col items-start group_5 group_10">
+        <span class="font_2">石智轩</span>
+        <span class="mt-36 font_3">QQ：894508104</span>
       </div>
-      <div class="flex-row group_63">
-        <div class="flex-col group_64">
-          <span class="self-start font_24 text_98">Candidate</span>
-          <span class="self-start font_26 text_101">Browse Jobs</span>
-          <div class="flex-col justify-start self-start text-wrapper_28">
-            <span class="font_26 text_105">Browse Employers</span>
-          </div>
-          <span class="self-stretch font_26 text_109">Candidate Dashboard</span>
-          <span class="self-start font_26 text_113">Saved Jobs</span>
-        </div>
-        <div class="flex-col group_65 ml-77">
-          <span class="self-start font_24 text_126">Employers</span>
-          <span class="self-start font_26 text_102">Post a Job</span>
-          <span class="self-start font_26 text_106">Browse Candidates</span>
-          <span class="self-stretch font_26 text_110">Employers Dashboard</span>
-          <div class="flex-col justify-start items-center self-start text-wrapper_31">
-            <span class="font_5 text_115">Applications</span>
-          </div>
-        </div>
-        <div class="flex-col self-start group_66 ml-77">
-          <span class="self-start font_24 text_100">Support</span>
-          <div class="flex-col justify-start items-center self-start text-wrapper_26">
-            <span class="font_5 text_104">Faqs</span>
-          </div>
-          <span class="self-start font_26 text_107">Privacy Policy</span>
-          <span class="self-stretch font_26 text_111">Terms & Conditions</span>
-        </div>
+      <div class="flex-col items-start group_5 group_11">
+        <span class="font_2 text_1">陈雨桐</span>
+        <span class="font_3 mt-35">QQ：2044237586</span>
+      </div>
+      <div class="flex-col items-start group_5 group_1">
+        <span class="font_2 text_16">王腾</span>
+        <span class="mt-36 font_3">QQ：2519219745</span>
+      </div>
+      <div class="flex-col items-start group_5 group_7">
+        <span class="font_2 text_17">冯杰</span>
+        <span class="mt-36 font_3">QQ：1600311994</span>
       </div>
     </div>
-    <div class="flex-row justify-between section_25">
-      <span class="font_25 text_116">@ 2021 Jobpilot - Job Portal. All rights Rserved</span>
-      <div class="flex-row items-center">
-        <img class="image_26" src="../assets/img/850ad8205c5770afe1ff56d5ea4fa1af.png" />
-        <img class="ml-20 image_28" src="../assets/img/b11bdb741ee1ad8be4adb1e5cec7449b.png" />
-        <img class="ml-20 image_27" src="../assets/img/6130d5acc782f0aea7444502df7fc08b.png" />
-        <img class="ml-20 image_29" src="../assets/img/59d2c4b6c137fc2c91916d533c8a2607.png" />
-      </div>
+    <div class="flex-row justify-end group_6 pos_4">
+      <span class="font_5 ">联系方式：18121656915</span>
+      <span class="ml-28 font_5">联系方式：17586408802</span>
+      <span class="ml-28 font_7 ">联系方式：19551532198</span>
+      <span class="ml-28 font_6">联系方式：19102501034</span>
+    </div>
+    <div class="flex-row justify-between group_9 pos_5">
+      <span class="font_4 text_11">院校：盐城工学院</span>
+      <span class="font_4 text_12">院校：盐城工学院</span>
+      <span class="font_4 text_13">院校：盐城工学院</span>
+      <span class="font_4 text_14">院校：盐城工学院</span>
     </div>
   </div>
 </template>
 
 <style scoped lang="css">
-.ml-3 {
-  margin-left: 3px;
+
+.mt-35 {
+  margin-top: 35px;
 }
-.ml-110 {
-  margin-left: 110px;
+.group {
+  padding: 90px 284px 95px;
+  height: 384px;
+  background: black;
 }
-.ml-77 {
-  margin-left: 77px;
+.pos {
+  position: absolute;
+  left: 284px;
+  top: 100px;
 }
-.font_5 {
-  font-size: 16px;
+.font {
+  font-size: 18px;
   font-family: Inter;
-  line-height: 14.5px;
-  color: #9199a3;
 }
-.section_24 {
-  background-color: #18191c;
-}
-.group_59 {
-  padding: 100px 300px 80px;
-}
-.group_60 {
-  width: 292.5px;
-}
-.group_61 {
-  overflow: hidden;
-  width: 206px;
-  height: 28px;
-}
-.font_23 {
-  font-size: 18.5px;
-  font-family: Inter;
-  line-height: 28px;
-}
-.text_55 {
-  width: 80px;
-}
-.text_95 {
-  margin-top: 2.5px;
+.text {
   color: #5e6670;
-  font-size: 18px;
+  line-height: 17px;
+
 }
-.text_96 {
-  margin-right: 22.5px;
+.text_2 {
   color: #ffffff;
-  font-size: 18px;
-  word-break: break-all;
-  width: 99px;
+  line-height: 20px;
 }
-.font_25 {
+.text_3 {
+  color: #767f8c;
   font-size: 14px;
   font-family: Inter;
   line-height: 20px;
-  color: #767f8c;
+  width: 310px;
 }
-.group_62 {
-  margin-top: 2px;
-  width: 97px;
+.pos_2 {
+  position: absolute;
+  left: 284px;
+  top: 137px;
 }
-.font_24 {
+.group_12 {
+  width: 1400px;
+}
+.pos_3 {
+  position: absolute;
+  left: 284px;
+  top: 194px;
+}
+.font_4 {
+  font-size: 16px;
+
+  line-height: 15px;
+  color: #9199a3;
+  margin-left: 80px;
+}
+.font_5 {
+  font-size: 16px;
+
+  line-height: 15px;
+  color: #9199a3;
+  margin-right: 120px;
+}
+.font_6 {
+  font-size: 16px;
+
+  line-height: 15px;
+  color: #9199a3;
+
+}
+.font_7 {
+  font-size: 16px;
+
+  line-height: 15px;
+  color: #9199a3;
+  margin-left: 50px;
+}
+.text_5 {
+  margin-right: 13px;
+}
+.text_6 {
+  margin-right: 20px;
+}
+.equal-division {
+  position: absolute;
+  right: 327.5px;
+  top: 90px;
+}
+.group_4 {
+  width: 960px;
+}
+.group_5 {
+  flex: 1 1 240px;
+}
+.group_10 {
+  padding: 10px 53.5px;
+}
+.font_2 {
   font-size: 20px;
   font-family: Inter;
   line-height: 18.5px;
   color: #ffffff;
+  margin-left: 70px;
 }
-.text_97 {
-  line-height: 32px;
-}
-.group_67 {
-  overflow: hidden;
-  width: 62px;
-}
-.text-wrapper_25 {
-  padding: 12px 0 12px;
-  overflow: hidden;
-  width: 46px;
-}
-.font_26 {
+.font_3 {
   font-size: 16px;
-  font-family: Inter;
-  line-height: 24px;
+  line-height: 20px;
   color: #9199a3;
+  margin-left: 80px;
 }
-.text_103 {
-  line-height: 12px;
+.group_11 {
+  padding: 10px 45.5px 10px 53.5px;
 }
-.text-wrapper_27 {
-  padding: 12px 0 12px;
-  overflow: hidden;
-  width: 62px;
-}
-.text_108 {
-  color: #ffffff;
-  font-size: 16px;
-  font-family: Inter;
-  line-height: 12px;
-}
-.text-wrapper_29 {
-  padding: 12px 0 8.5px;
-  overflow: hidden;
-  width: 52px;
-}
-.text_112 {
-  line-height: 15.5px;
-}
-.text-wrapper_30 {
-  padding: 12px 0 8.5px;
-  overflow: hidden;
-  width: 34px;
-}
-.text_114 {
-  line-height: 15px;
-}
-.group_63 {
-  margin-right: 61px;
-}
-.group_64 {
-  margin-bottom: 4px;
-  width: 163px;
-}
-.text_98 {
-  line-height: 15.5px;
-}
-.text_101 {
-  margin-top: 32.5px;
-  text-align: center;
-  width: 95px;
-}
-.text-wrapper_28 {
-  margin-top: 8px;
-  padding: 8px 0 4px;
-  overflow: hidden;
-  width: 139px;
-  height: 36px;
-}
-.text_105 {
-  text-align: center;
-}
-.text_109 {
-  margin-top: 12px;
-  text-align: center;
-}
-.text_113 {
-  margin-top: 16px;
-  text-align: center;
-  width: 86px;
-}
-.group_65 {
-  width: 164.5px;
-}
-.text_126 {
+.text_1 {
   line-height: 18.5px;
 }
-.text_102 {
-  margin-top: 29px;
-  text-align: center;
-  width: 65px;
+.group_1 {
+  padding: 10px 52.5px 10px 53.5px;
 }
-.text_106 {
-  margin-top: 15.5px;
-  text-align: center;
-  width: 145px;
+.text_16 {
+  line-height: 18.5px;
 }
-.text_110 {
-  margin-top: 16.5px;
-  text-align: center;
+.group_7 {
+  padding: 10px 51.5px 10px 53.5px;
 }
-.text-wrapper_31 {
-  margin-top: 8px;
-  padding: 12px 0 9px;
-  overflow: hidden;
-  width: 93px;
+.text_17 {
+  line-height: 18.5px;
 }
-.text_115 {
-  line-height: 15.5px;
+.group_6 {
+  padding: 0 46px;
+  width: 1600px;
 }
-.group_66 {
-  width: 137px;
+.pos_4 {
+  position: absolute;
+  left: 50%;
+  top: 234px;
+  transform: translateX(-50%);
 }
-.text_100 {
-  line-height: 19px;
+.text_8 {
+  margin-left: 2px;
+  margin-right: 60px;
 }
-.text-wrapper_26 {
-  margin-top: 20.5px;
-  padding: 12px 0 9px;
-  overflow: hidden;
-  width: 37px;
+.text_9 {
+  margin-right: 53px;
 }
-.text_104 {
-  line-height: 15px;
+.text_10 {
+  margin-right: 60px;
 }
-.text_107 {
-  margin-top: 12px;
-  text-align: center;
-  width: 102px;
+.group_9 {
+  width: 1352px;
 }
-.text_111 {
-  margin-top: 16px;
-  text-align: center;
+.pos_5 {
+  position: absolute;
+  left: 50%;
+  top: 274px;
+  transform: translateX(-50%);
 }
-.section_25 {
-  padding: 24px 300px 22.5px 300.5px;
-  background-color: #18191c;
-  box-shadow: 0px 1px 0px #2f3338 inset;
+.text_11 {
+  margin-left: 420px;
 }
-.text_116 {
-  width: 256px;
+.text_12 {
+  margin-left: 100px;
 }
-.image_26 {
-  width: 10px;
-  height: 20px;
+.text_13 {
+  margin-left: 20px;
+
 }
-.image_28 {
-  width: 20px;
-  height: 14px;
-}
-.image_27 {
-  width: 20px;
-  height: 20px;
-}
-.image_29 {
-  width: 20px;
-  height: 16px;
+.text_14 {
+  margin-left: 20px;
+
 }
 </style>

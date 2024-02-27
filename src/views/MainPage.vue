@@ -5,12 +5,12 @@
   import Category from "../components/Category.vue";           // 工具箱
   import Testimonial from "../components/Testimonial.vue";     //  用户评价
   import Section1 from '../components/Section 1.vue';          // 介绍1--自定义错题
-  import RoadMap  from "../components/RoadMap.vue";
-  import Section2 from '../components/Section 2.vue';          // 合作商
-  import Section3 from '../components/Section 3.vue';          // 联系栏
+  import RoadMap  from "../components/RoadMap.vue";             // 路线图
+  import Section2 from '../components/Section 2.vue';          // 讨论组
+  import Section3 from '../components/Section 3.vue';          // 合作商
   import OurTeams from "../components/OurTeams.vue";           // 我们的团队
   import News from "../components/News.vue";                    // 新闻
-  import Frame2 from "../components/Frame 2.vue";              // 讨论组
+  import Frame2 from "../components/Frame 2.vue";              //联系栏
   import MessageBoard from "../components/MessageBoard.vue";  // 留言板
   import Footer from "../components/Footer.vue";               // 底栏
   import FloatingWindow from '../components/FloatingWindow.vue';  // 导入悬浮窗组件

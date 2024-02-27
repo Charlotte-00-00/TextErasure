@@ -1,5 +1,5 @@
 <template>
-  <el-carousel :interval="6000" type="card" height="600px">
+  <el-carousel :interval="3000" type="card" height="600px">
     <el-carousel-item v-for="item in carouseData" :key="item.url" height="auto" autoplay>
       <div class="carousel-background" :style="{ backgroundImage: 'url(' + item.url + ')' }"></div>
     </el-carousel-item>

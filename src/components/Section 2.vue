@@ -22,39 +22,39 @@ const router = useRouter();
     <div class="flex-row self-stretch">
       <div class="flex-col group_35">
       <span class="self-stretch font_15">
-        All eFounders teams have moved
+        猪猪错题集是一个特别方便的学习软件
         <br />
-        to Nexus for all things product
+        可以一键生成错题，还可以举一反三查看类似题
         <br />
-        management and it is truly a
+        对于整理错题与巩固知识都是不错的选择
         <br />
       </span>
-        <span class="mt-26 self-center font_15 text_71">game-changer.</span>
+        <span class="mt-26 self-center font_15 text_71">best   ❤</span>
       </div>
       <div class="flex-col group_36 ml-15">
       <span class="self-stretch font_15 text_38">
-        ability to adapt to our processes,
+        炒鸡好用，管理、导出都很方便
         <br />
       </span>
         <span class="self-stretch font_15 text_38 text_70">
-        not the other way around.Now
+          简直解放双手，不用再花很多时问来抄题目了（感谢感谢）
         <br />
       </span>
         <span class="self-stretch font_15 text_38">
-        that we have all user insights
+          但是数学试卷拍的时候会有一些画图的笔记，在消除笔记的时候会把图片全部抹掉了
         <br />
-        visible in our PRDs doc, there is
+        希望能更细一点，能保持数学模型的原样是最好的了。
         <br />
       </span>
         <span class="self-center font_15 text_73">no going back ❤</span>
       </div>
       <div class="flex-col justify-start items-center group_37 ml-15">
       <span class="font_15 text_63">
-        Nexus is the gear that keeps our
+        每次孩子的错题都要一题一题抄下来，不仅费时间还没有效率。
         <br />
-        product feedback management
+        有了猪猪错题集以后省时省力，还可以拍笔记，转换文档各种功能
         <br />
-        running like clockwork.
+        以后再也不用担心整理错题的问题了
       </span>
       </div>
     </div>
@@ -62,48 +62,48 @@ const router = useRouter();
       <div class="flex-col justify-start items-center group_43">
         <div class="flex-col group_44">
         <span class="font_15">
-          Managing feedback throughout
+          比自己抄错题效率高很多
           <br />
-          the whole Nexus has been a
-          <br />
-        </span>
-          <span class="font_15 text_38">
-          tedious task until we discovered
+          希望以后能联动作业帮或者小猿提高题库量
           <br />
         </span>
           <span class="font_15 text_38">
-          Nexus: a simple tool enabling you
+            （我们都是从他们那边搜题然后截屏过来不是很方便）
           <br />
-          to do complex things.
+        </span>
+          <span class="font_15 text_38">
+            字体大小改变能更人性化
+          <br />
+          非常感谢！
         </span>
         </div>
       </div>
       <div class="flex-col justify-start items-center group_45 ml-15">
         <div class="flex-col group_47">
         <span class="font_15">
-          Nexus makes it easy to contact
+          建议高年级的孩子一定要有整理错题本的习惯！
           <br />
-          the most relevant users
+          一个错题本，可以帮助你彻底告别低效的“题海战术”。
           <br />
-          whenever I need feedback on a
+          不断集中时间、精力，攻击自己的易错题、错题和难题
           <br />
         </span>
           <span class="mt-26 font_15 text_38">
-          new product initiative. It helps me
+            把有限的火力，全部集中在自己的薄弱短板上
           <br />
-          capture all the necessary
+          当然提分效率最高！
           <br />
-          customer context without friction.
+          继续加油吧！
         </span>
         </div>
       </div>
       <div class="flex-col justify-start items-center group_46 ml-15">
         <div class="flex-col group_48">
         <span class="self-stretch font_15 text_38">
-          for everyone when it comes to
+          太棒了！拍照清晰，去手写完美！
           <br />
         </span>
-          <span class="self-start font_15 text_80">product feedback</span>
+          <span class="self-start font_15 text_80">匹配的准确率也高，用起来很顺手。期待后面的新功能</span>
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@ const router = useRouter();
 }
 .group_33 {
   padding-bottom: 182px;
-  width: 472px;
+  width: 500px;
 }
 .text_68 {
   line-height: 47.5px;
@@ -252,5 +252,10 @@ const router = useRouter();
   word-break: break-all;
   width: 262.5px;
 }
-
+.image_12 {
+  margin-right: 30.5px;
+  margin-top: 82px;
+  width: 1056px;
+  height: 1080px;
+}
 </style>
