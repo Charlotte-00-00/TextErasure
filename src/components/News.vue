@@ -6,7 +6,6 @@
   <head>
     <meta charset="UTF-8">
     <title>最新动态</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
   <div class="newsCenterPanel">
@@ -19,14 +18,14 @@
         <a hidefocus="true" href="#">
           <div class="time">
             <p class="day">2</p>
-            <p class="ym">2019-1</p>
+            <p class="ym">2024-1</p>
           </div>
-          <div class="newTitle">[精]科技网新产品“科技商城”正式上线</div>
+          <div class="newTitle">[精]错题集 正式上线</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            1月2日，科技网新产品“科技商城”正式上线，商家企业将能通过新产品科技商城享受更优质的在线商城建设服务，轻松打造属于自己的在线商城
+            1月2日，猪猪错题集 “错题集”正式上线，用户将能通过保存自己的错题，轻松打造属于自己的错题复习本
           </div>
         </a>
       </div>
@@ -34,14 +33,14 @@
         <a hidefocus="true" href="#">
           <div class="time">
             <p class="day">29</p>
-            <p class="ym">2018-12</p>
+            <p class="ym">2024-4</p>
           </div>
-          <div class="newTitle">[精]科技网助力2018广州互联网+新经济发展论坛</div>
+          <div class="newTitle">[精]讨论组 正式上线</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            12月27日，2018广州互联网+新经济发展论坛在广州阳光酒店隆重举行，科技网作为此次论坛技术支持单位，也受邀参会共探未来共赢之路……
+            讨论组……
           </div>
         </a>
       </div>
@@ -51,7 +50,7 @@
             <p class="day">8</p>
             <p class="ym">2019-1</p>
           </div>
-          <div class="newTitle">20190109功能更新（1月第二周）</div>
+          <div class="newTitle">20230109功能更新（1月第二周）</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
@@ -66,7 +65,7 @@
             <p class="day">8</p>
             <p class="ym">2019-1</p>
           </div>
-          <div class="newTitle">你还在烦恼如何制作电子邀请函吗？快看这里</div>
+          <div class="newTitle">20230109功能更新（1月第二周）</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
@@ -81,7 +80,7 @@
             <p class="day">7</p>
             <p class="ym">2019-1</p>
           </div>
-          <div class="newTitle">你是否缺少一款好用的H5制作软件？</div>
+          <div class="newTitle">20230109功能更新（1月第二周）</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
@@ -96,7 +95,7 @@
             <p class="day">4</p>
             <p class="ym">2019-1</p>
           </div>
-          <div class="newTitle">H5页面设计风格大盘点！</div>
+          <div class="newTitle">20230109功能更新（1月第二周）</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
@@ -111,7 +110,7 @@
             <p class="day">3</p>
             <p class="ym">2019-1</p>
           </div>
-          <div class="newTitle">H5场景制作原来可以有这么多风格！</div>
+          <div class="newTitle">20230109功能更新（1月第二周）</div>
 
           <div class="newTitleIcon"></div>
           <div class="border"></div>
@@ -126,7 +125,7 @@
             <p class="day">2</p>
             <p class="ym">2019-1</p>
           </div>
-          <div class="newTitle">3步制作一款酷炫的年会邀请函</div>
+          <div class="newTitle">20230109功能更新（1月第二周）</div>
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
