@@ -63,7 +63,7 @@ export default {
                       </div>
                     </div>
                     <div class="ml-24 flex-row items-center equal-division-item">
-                      <img class="image_6" src="../assets/img/0c78327f1bd21bdee13868c2b51391b5.png" />
+                      <img class="image_6" src="../assets/img/Category/Icon10.png" />
                       <div class="flex-col items-start group_14 ml-21">
                         <span class="font_9 text_18">与同学交流</span>
                         <span class="font_10 text_22 mt-15">交流错题经验</span>
