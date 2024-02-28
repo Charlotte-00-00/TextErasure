@@ -33,7 +33,7 @@
           </el-form-item>
           <div class="forgot-password">忘记 密码？</div>
           <div class="login-btn">
-            <el-button type="primary" @click="submitForm(login)" class="login-button">登录</el-button>
+            <el-button type="primary" @click="handleLogin" class="login-button">登录</el-button>
           </div>
 
           <el-checkbox class="login-tips" v-model="checked" label="记住密码" size="large"/>
@@ -55,22 +55,70 @@ import { ElMessage } from 'element-plus';
 import type { FormInstance, FormRules } from 'element-plus';
 import { Lock, User } from '@element-plus/icons-vue';
 
+// 登录处理函数
+// 登录处理函数
+// 登录处理函数
+const handleLogin = async () => {
+  try {
+    // 发起登录请求到后端服务器
+    const response = await fetch('http://127.0.0.1:8089/api/login/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username: param.username, password: param.password }),
+    });
 
+    // 检查响应状态
+    if (!response.ok) {
+      // 登录失败，抛出错误
+      throw new Error('登录失败');
+    }
+
+    // 登录成功，处理响应数据
+    const data = await response.json();
+    // 假设后端返回的数据中有 token 和其他登录信息
+    localStorage.setItem('is_login', 'true');
+    localStorage.setItem('token', data.token); // 保存认证令牌
+    localStorage.setItem('user_id', data.user_id);
+    localStorage.setItem('user_name', data.user_name);
+
+    // 根据用户名设置权限（这部分逻辑可能需要根据你的实际需求进行调整）
+    const keys = permiss.defaultList[data.user_name == 'admin' ? 'admin' : 'user'];
+    permiss.handleSet(keys);
+    // 保存权限到本地存储（这部分逻辑也可能需要调整）
+    localStorage.setItem('login-param', JSON.stringify(keys));
+
+    // 跳转到主页
+    await router.push('/');
+    ElMessage.success('登录成功');
+  } catch (error) {
+    // 处理错误
+    ElMessage.error('登录失败: ' + error.message);
+  }
+};
+
+// 登录信息接口
 interface LoginInfo {
   username: string;
   password: string;
 }
 
+// 从本地存储中获取保存的登录参数
 const lgStr = localStorage.getItem('login-param');
 const defParam = lgStr ? JSON.parse(lgStr) : null;
-const checked = ref(!!lgStr); // ref(lgStr ? true : false);
+// 记住密码的状态
+const checked = ref(lgStr ? true : false);
 
+// 使用 Vue Router 的 router 实例
 const router = useRouter();
+// 响应式登录参数对象
 const param = reactive<LoginInfo>({
   username: defParam ? defParam.username : '',
   password: defParam ? defParam.password : '',
 });
 
+// 登录表单的验证规则
 const rules: FormRules = {
   username: [
     {
@@ -81,33 +129,52 @@ const rules: FormRules = {
   ],
   password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
 };
+// 权限状态管理
 const permiss = usePermissStore();
+// 登录表单实例
 const login = ref<FormInstance>();
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  formEl.validate((valid: boolean) => {
-    if (valid) {
-      ElMessage.success('登录成功');
-      localStorage.setItem('ms_username', param.username);
-      const keys = permiss.defaultList[param.username == 'admin' ? 'admin' : 'user'];
-      permiss.handleSet(keys);
-      localStorage.setItem('ms_keys', JSON.stringify(keys));
-      router.push('/');
-      if (checked.value) {
-        localStorage.setItem('login-param', JSON.stringify(param));
-      } else {
-        localStorage.removeItem('login-param');
-      }
-    } else {
-      ElMessage.error('登录失败');
-      return false;
+// 提交表单的处理函数
+// 提交表单的处理函数
+const validateAndLogin = async (formEl: FormInstance | undefined): Promise<boolean> => {
+  return new Promise<boolean>((resolve, reject) => {
+    if (!formEl) {
+      reject('Form instance is undefined');
+      return;
     }
+    formEl.validate((valid: boolean) => {
+      if (valid) {
+        resolve(true);
+      } else {
+        reject('Form validation failed');
+      }
+    });
   });
 };
 
-const tags = useTagsStore();
-tags.clearTags();
+const submitForm = async (formEl: FormInstance | undefined) => {
+  try {
+    // 使用 await 调用 validateAndLogin 函数
+    await validateAndLogin(formEl);
+    ElMessage.success('登录成功');
+    localStorage.setItem('ms_username', param.username);
+    const keys = permiss.defaultList[param.username == 'admin' ? 'admin' : 'user'];
+    permiss.handleSet(keys);
+    localStorage.setItem('ms_keys', JSON.stringify(keys));
+    router.push('/');
+    if (checked.value) {
+      localStorage.setItem('login-param', JSON.stringify(param));
+    } else {
+      localStorage.removeItem('login-param');
+    }
+  } catch (error) {
+    ElMessage.error('登录失败');
+  }
+};
 
+// 标签状态管理
+const tags = useTagsStore();
+// 清除所有标签
+tags.clearTags();
 </script>
 
 

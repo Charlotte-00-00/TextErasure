@@ -119,13 +119,13 @@ const router = useRouter();
 }
 .font_8 {
   font-size: 25px;
-  font-family: Inter;
+
   line-height: 34.5px;
   color: #171618;
 }
 .font_13 {
   font-size: 52.5px;
-  font-family: Inter;
+
   letter-spacing: -1.5px;
   font-weight: 900;
   color: #171618;
@@ -157,7 +157,7 @@ const router = useRouter();
 }
 .font_15 {
   font-size: 18.5px;
-  font-family: Inter;
+
   line-height: 26px;
   color: #5b5a59;
 }
