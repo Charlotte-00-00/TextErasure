@@ -299,15 +299,15 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     NProgress.start(); // 启动某种进度条或加载指示器的命令。
     // 检查是否是公共页面，如果是则直接跳过登录和权限检查
-    if (to.path === '/MainPage') {
+    if (to.path === '/MainPage' || to.path === '/Register') {
         next();
         return;
     }
     const role = localStorage.getItem('ms_username'); // 使用 localStorage 来获取登录用户的角色。
     const permiss = usePermissStore(); //使用状态管理库（如 Pinia）来为 permissStore 的 store 中获取权限信息。
 
-    if (!role && to.path !== '/RegistrationForm') {  // 如果没有登录且不是要跳转到注册页面，则重定向到注册页面
-        next('/RegistrationForm');
+    if (!role && to.path !== '/Login') {  // 如果没有登录且不是要跳转到注册页面，则重定向到注册页面
+        next('/Login');
     } else if (to.meta.permiss && !permiss.key.includes(to.meta.permiss)) {
         // 如果没有权限，则重定向到403页面
         next('/403');

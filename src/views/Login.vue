@@ -11,7 +11,7 @@
         <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="login-form">
           <el-form-item prop="username">
             <div class="input-group">
-              <div class="label">邮箱/手机号</div>
+              <div class="label">用户名</div>
               <el-input v-model="param.username" placeholder="Example@email.com" class="input">
                 <template #prepend>
                   <el-button :icon="User"></el-button>
@@ -160,7 +160,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
     const keys = permiss.defaultList[param.username == 'admin' ? 'admin' : 'user'];
     permiss.handleSet(keys);
     localStorage.setItem('ms_keys', JSON.stringify(keys));
-    router.push('/');
+    await router.push('/');
     if (checked.value) {
       localStorage.setItem('login-param', JSON.stringify(param));
     } else {
@@ -180,8 +180,6 @@ tags.clearTags();
 
 
 <style scoped>
-
-
 
 .login-wrap {  /*登录框的背景*/
   display: flex;

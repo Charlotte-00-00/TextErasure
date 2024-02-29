@@ -6,14 +6,15 @@
             这是一个帮助您提高成绩的多功能app <br>
               整理错题  删除做题痕迹  发布题目
         </div>
-        <div class="login-text">用户登录</div>
+        <div class="login-text">用户注册</div>
 
       <div class="box">
         <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="login-form">
           <el-form-item prop="username">
             <div class="input-group">
-              <div class="label">邮箱/手机号</div>
-              <el-input v-model="param.username" placeholder="Example@email.com" class="input">
+              <div class="label">用户名</div>
+              <el-input v-model="param.username" placeholder="At least 4 characters" class="input">
+
                 <template #prepend>
                   <el-button :icon="User"></el-button>
                 </template>
@@ -24,7 +25,7 @@
             <el-form-item prop="password">
                 <div class="input-group">
                 <div class="label">密码</div>
-                <el-input type="password" v-model="param.password" @keyup.enter="submitForm(register)"
+                <el-input type="password" v-model="param.password" @keyup.enter="submitForm(login)"
                             placeholder="At least 8 characters" class="input">
                     <template #prepend>
                     <el-button :icon="Lock"></el-button>
@@ -36,7 +37,7 @@
             <el-form-item prop="password">
                 <div class="input-group">
                 <div class="label">确认密码</div>
-                <el-input type="password" v-model="param.password" @keyup.enter="submitForm(register)"
+                <el-input type="password" v-model="param.password" @keyup.enter="submitForm(login)"
                             placeholder="At least 8 characters" class="input">
                     <template #prepend>
                     <el-button :icon="Lock"></el-button>
@@ -45,13 +46,12 @@
                 </div>
             </el-form-item>
 
-
-
                 <el-form :model="param" :rules="rules" ref="register" label-width="0px" class="register-form">
                 <el-form-item prop="username">
                     <div class="input-group">
-                    <div class="label">用户名</div>
-                    <el-input v-model="param.username" placeholder="At least 4 characters" class="input">
+                    <div class="label">邮箱/手机</div>
+                      <el-input v-model="param.username" placeholder="Example@email.com" class="input">
+
                         <template #prepend>
                             <el-button :icon="User"></el-button>
                         </template>
@@ -60,7 +60,7 @@
                 </el-form-item>
 
             <div class="login-btn">
-                <el-button type="primary" @click="submitForm(register)" class="login-button">注册</el-button>
+                <el-button type="primary" @click="handleRegister" class="login-button">注册</el-button>
             </div>
         </el-form>
         </el-form>
@@ -71,68 +71,134 @@
 
 </template>
 
-    <script setup lang="ts">
-    import { ref, reactive } from 'vue';
-    import { useTagsStore } from '../store/tags';
-    import { usePermissStore } from '../store/permiss';
-    import { useRouter } from 'vue-router';
-    import { ElMessage } from 'element-plus';
-    import type { FormInstance, FormRules } from 'element-plus';
-    import { Lock, User } from '@element-plus/icons-vue';
+<script setup lang="ts">
+import { ref, reactive } from 'vue';
+import { useTagsStore } from '../store/tags';
+import { usePermissStore } from '../store/permiss';
+import { useRouter } from 'vue-router';
+import { ElMessage } from 'element-plus';
+import type { FormInstance, FormRules } from 'element-plus';
+import { Lock, User } from '@element-plus/icons-vue';
 
 
-interface RegisterInfo {
-    username: string;
-    password: string;
-}
-
-const RgStr = localStorage.getItem('register-param');
-const defParam = RgStr ? JSON.parse(RgStr) : null;
-const checked = ref(!!RgStr); // ref(lgStr ? true : false);
-
-const router = useRouter();
-const param = reactive<RegisterInfo>({
-    username: defParam ? defParam.username : '',
-    password: defParam ? defParam.password : '',
+// 注册处理函数
+const handleRegister = async () => {
+  try {
+    // 发起登录请求到后端服务器
+    const response = await fetch('http://127.0.0.1:8089/api/register/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username: param.username, password: param.password }),
     });
 
-const rules: FormRules = {
-    username: [
-    {
-        required: true,
-        message: '请输入用户名',
-        trigger: 'blur',
-    },
-    ],
-    password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
-    };
-    const permiss = usePermissStore();
-    const register = ref<FormInstance>();
-    const submitForm = (formEl: FormInstance | undefined) => {
-    if (!formEl) return;
-    formEl.validate((valid: boolean) => {
-    if (valid) {
-        ElMessage.success('登录成功');
-        localStorage.setItem('ms_username', param.username);
-        const keys = permiss.defaultList[param.username == 'admin' ? 'admin' : 'user'];
-        permiss.handleSet(keys);
-        localStorage.setItem('ms_keys', JSON.stringify(keys));
-        router.push('/');
-        if (checked.value) {
-        localStorage.setItem('register-param', JSON.stringify(param));
-        } else {
-        localStorage.removeItem('register-param');
-        }
-    } else {
-        ElMessage.error('注册失败');
-        return false;
+    // 检查响应状态
+    if (!response.ok) {
+      // 登录失败，抛出错误
+      throw new Error('注册失败');
     }
-    });
+
+    // 登录成功，处理响应数据
+    const data = await response.json();
+    // 假设后端返回的数据中有 token 和其他登录信息
+    localStorage.setItem('is_login', 'true');
+    localStorage.setItem('token', data.token); // 保存认证令牌
+    localStorage.setItem('user_id', data.user_id);
+    localStorage.setItem('user_name', data.user_name);
+
+    // 根据用户名设置权限（这部分逻辑可能需要根据你的实际需求进行调整）
+    const keys = permiss.defaultList[data.user_name == 'admin' ? 'admin' : 'user'];
+    permiss.handleSet(keys);
+    // 保存权限到本地存储（这部分逻辑也可能需要调整）
+    localStorage.setItem('login-param', JSON.stringify(keys));
+
+    // 跳转到主页
+    await router.push('/');
+    ElMessage.success('注册成功');
+  } catch (error) {
+    // 处理错误
+    ElMessage.error('注册失败: ' + error.message);
+  }
 };
 
-    const tags = useTagsStore();
-    tags.clearTags();
+// 登录信息接口
+interface LoginInfo {
+  username: string;
+  password: string;
+}
 
+// 从本地存储中获取保存的登录参数
+const lgStr = localStorage.getItem('login-param');
+const defParam = lgStr ? JSON.parse(lgStr) : null;
+// 记住密码的状态
+const checked = ref(lgStr ? true : false);
+
+// 使用 Vue Router 的 router 实例
+const router = useRouter();
+// 响应式登录参数对象
+const param = reactive<LoginInfo>({
+  username: defParam ? defParam.username : '',
+  password: defParam ? defParam.password : '',
+});
+
+// 登录表单的验证规则
+const rules: FormRules = {
+  username: [
+    {
+      required: true,
+      message: '请输入用户名',
+      trigger: 'blur',
+    },
+  ],
+  password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
+};
+// 权限状态管理
+const permiss = usePermissStore();
+// 登录表单实例
+const login = ref<FormInstance>();
+// 提交表单的处理函数
+// 提交表单的处理函数
+const validateAndLogin = async (formEl: FormInstance | undefined): Promise<boolean> => {
+  return new Promise<boolean>((resolve, reject) => {
+    if (!formEl) {
+      reject('Form instance is undefined');
+      return;
+    }
+    formEl.validate((valid: boolean) => {
+      if (valid) {
+        resolve(true);
+      } else {
+        reject('Form validation failed');
+      }
+    });
+  });
+};
+
+const submitForm = async (formEl: FormInstance | undefined) => {
+  try {
+    // 使用 await 调用 validateAndLogin 函数
+    await validateAndLogin(formEl);
+    ElMessage.success('注册成功');
+    localStorage.setItem('ms_username', param.username);
+    const keys = permiss.defaultList[param.username == 'admin' ? 'admin' : 'user'];
+    permiss.handleSet(keys);
+    localStorage.setItem('ms_keys', JSON.stringify(keys));
+    await router.push('/');
+    if (checked.value) {
+      localStorage.setItem('login-param', JSON.stringify(param));
+    } else {
+      localStorage.removeItem('login-param');
+    }
+  } catch (error) {
+    ElMessage.error('注册失败');
+  }
+};
+
+// 标签状态管理
+const tags = useTagsStore();
+// 清除所有标签
+tags.clearTags();
 </script>
   
   

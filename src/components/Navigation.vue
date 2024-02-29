@@ -4,8 +4,11 @@ export default {
     return {}
   },
   methods: {
-    jump () {
-      this.$router.push('/Registration')
+    jump1 () {
+      this.$router.push('/Login')
+    },
+    jump2 () {
+      this.$router.push('/Register')
     }
   }
 }
@@ -30,13 +33,14 @@ export default {
       </div>
     </div>
 
-    <div class="flex-col justify-start items-center text-wrapper_3">
-      <span class="font_4 text_125">新用户 注册</span>
-    </div>
+<!--    <div class="flex-col justify-start items-center text-wrapper_3">-->
+<!--      <span class="font_4 text_125">新用户 注册</span>-->
+    <el-button type="primary" @click="jump2" class="text-wrapper_3 .text_125" >新用户 注册 </el-button>
+<!--    </div>-->
 
 <!--    <div class="flex-col justify-start items-center text-wrapper_4">-->
 
-    <el-button type="primary" @click="jump" class="text-wrapper_4 .text_125" >用户 登录 </el-button>
+    <el-button type="primary" @click="jump1" class="text-wrapper_4 .text_125" >用户 登录 </el-button>
 
     </div>
 <!--  </div>-->
@@ -122,18 +126,14 @@ export default {
   border-radius: 3px;
   width: 132px;
   height: 48px;
+  font-size: 16px;
+  font-family: Inter-Semi,system-ui;
   border-left: solid 1px #cee0f5;
   border-right: solid 1px #cee0f5;
   border-top: solid 1px #cee0f5;
   border-bottom: solid 1px #cee0f5;
 }
-.font_4 {
-  font-size: 16px;
-  font-family: Inter-Semi;
-  line-height: 24px;
-  font-weight: 700;
-  color: #0a65cc;
-}
+
 
 :deep(.font_bottom) {
   width:30px;
@@ -171,7 +171,7 @@ export default {
 }
 .font_25 {
   font-size: 14px;
-  font-family: Inter;
+
   line-height: 20px;
   color: #767f8c;
 }

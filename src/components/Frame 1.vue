@@ -167,7 +167,7 @@ export default {
 }
 .font_9 {
   font-size: 25px;
-  font-family: Inter;
+
   line-height: 32px;
   color: #18191c;
 }
@@ -177,7 +177,7 @@ export default {
 }
 .font_10 {
   font-size: 16px;
-  font-family: Inter;
+
   line-height: 14.5px;
   color: #767f8c;
 }
