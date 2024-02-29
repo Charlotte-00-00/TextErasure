@@ -163,13 +163,22 @@ const routes: RouteRecordRaw[] = [
             },
 
             {
-                path: '/RegistrationForm',
-                name: 'RegistrationForm',
+                path: '/Login',
+                name: 'Login',
                 meta: {
                     title: '登录',
                 },
 
-                component: () => import(/* webpackChunkName: "login" */ '../views/RegistrationForm.vue'),
+                component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
+            },
+            {
+                path: '/Register',
+                name: 'Register',
+                meta: {
+                    title: '注册',
+                },
+
+                component: () => import(/* webpackChunkName: "login" */ '../views/Register.vue'),
             },
 
             {
