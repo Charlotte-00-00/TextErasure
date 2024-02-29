@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       teamMembers: [
-        { id: 1, name: '陈雨桐', image: '../src/assets/img/OurTeams/team-pic1.png', description: '简介1' },
+        { id: 1, name: '陈雨桐', image: '../src/assets/img/OurTeams/team-pic1.png', description: '致力于成为六边形战士' },
         { id: 2, name: '石智轩', image: '../src/assets/img/OurTeams/team-pic2.png', description: '简介2' },
         { id: 3, name: '王腾', image: '../src/assets/img/OurTeams/team-pic3.png', description: '简介3' },
         { id: 4, name: '冯杰', image: '../src/assets/img/OurTeams/team-pic4.png', description: '简介4' },

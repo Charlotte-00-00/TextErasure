@@ -20,12 +20,12 @@
 
 <script>
 import { reactive } from 'vue'
-import { quillEditor } from 'vue3-quill'
-
+import { QuillEditor,Quill } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 export default {
   name: 'App',
   components: {
-    quillEditor
+    QuillEditor
   },
   setup() {
     const state = reactive({

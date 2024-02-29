@@ -27,9 +27,9 @@
                     <el-icon><document /></el-icon>
                     <span>工具Utils</span>
                     </template>
-<!--                    <el-menu-item index="3-1" @click="$router.push({ path: '/html-editor' })">-->
-<!--                        <span> 富文本</span>-->
-<!--                    </el-menu-item>-->
+                    <el-menu-item index="3-1" @click="$router.push({ path: '/html-editor' })">
+                        <span> 富文本</span>
+                    </el-menu-item>
                 </el-sub-menu>
                 <el-menu-item index="4">
                     <el-icon><setting /></el-icon>

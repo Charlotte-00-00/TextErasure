@@ -113,7 +113,7 @@ export default {
 }
 .font_5 {
   font-size: 16px;
-  font-family: Inter;
+
   line-height: 14.5px;
   color: #9199a3;
 }
