@@ -5,7 +5,7 @@
     <div class="flex-row">
       <div class="flex-col-title">
         <!-- 工具箱标题 -->
-        <span class="text-title">工 具 箱</span>
+        <span class="text-title ">工 具 箱</span>
       </div>
       <div class="flex-col">
       </div>
@@ -132,6 +132,7 @@
   line-height: 28px;
   color: #18191c;
   margin-bottom: 16px;
+  margin-left: 40px;
 
 }
 

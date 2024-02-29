@@ -146,8 +146,8 @@ const router = useRouter();
   background-color: #e7ecee;
 }
 .font_13 {
-  font-size: 52.5px;
-  font-family: Inter;
+  font-size: 50px;
+
   letter-spacing: -1.5px;
   font-weight: 900;
   color: #171618;

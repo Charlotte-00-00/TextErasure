@@ -1,4 +1,5 @@
 <template>
+  <span class="text-title ">用户评价</span>
   <el-carousel :interval="3000" type="card" height="600px">
     <el-carousel-item v-for="item in carouseData" :key="item.url" height="auto" autoplay>
       <div class="carousel-background" :style="{ backgroundImage: 'url(' + item.url + ')' }"></div>
@@ -33,6 +34,17 @@
   background-position: center; /* 背景图居中显示 */
   border:  1px solid #000;
   border-radius:15px;
+
+}
+
+.text-title{
+
+  font-size: 48px;
+  font-family: 华文中宋;
+  line-height: 28px;
+  color: #18191c;
+  margin-bottom: 16px;
+  margin-left: 100px;
 
 }
 </style>
