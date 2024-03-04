@@ -24,9 +24,12 @@ export default defineConfig({
 	optimizeDeps: {
 		include: ['schart.js']
 	},
+
+
 	// 开发服务器配置
 	server: {
 		// 代理配置
+		port: 5173,  // 本地端口
 		proxy: {
 			// 对于所有以'/api'开头的请求，将其代理到'http://localhost:8089'
 			'/api': {

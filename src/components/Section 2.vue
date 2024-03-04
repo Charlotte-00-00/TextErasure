@@ -133,7 +133,7 @@ const router = useRouter();
 .group_32 {
   margin-top: 77.5px;
   padding: 0 321.5px 98px 321.5px;
-  height: 1200px;
+  height: 1100px;
 }
 .group_33 {
   padding-bottom: 182px;

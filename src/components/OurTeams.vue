@@ -151,6 +151,7 @@ export default {
 /* 图片样式 */
 img {
   vertical-align: middle;
-  max-width: 100%;
+  max-width: 20%;
+  border-radius: 10px;
 }
 </style>

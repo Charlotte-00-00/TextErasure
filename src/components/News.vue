@@ -70,7 +70,7 @@
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            将近年尾，很多公司企业都会准备举行一些大型活动，例如年会、颁奖会等等，来激励员工一年的辛苦劳动。邀请员工出席这些大型活动，得先要准备好一个电子邀请函，那么我们又该怎样去制作电子邀请函呢？
+            。。。。。。
           </div>
         </a>
       </div>
@@ -85,7 +85,7 @@
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            又进入了一年的尾声，不管是企业、公司还是商家，都可能会举办很多活动，在这种情况下，不管是做H5邀请函、H5传单等，都需要用到H5制作软件。而我们烦恼的是，如何才能够找到一款好用的制作软件来做H5呢？
+            。。。。。
           </div>
         </a>
       </div>
@@ -100,7 +100,7 @@
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            H5页面发展到现在，已经不像几年前那样稀有了，甚至可以说是遍地都是。只有好的H5页面才能够达到宣传推广的效果。但是设计有限，灵感缺乏该怎么办呢？下面小编来给大家盘点几个H5页面设计风格！
+            .......
           </div>
         </a>
       </div>
@@ -115,7 +115,7 @@
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            H5场景制作是当下比较热门的页面制作方式，然而还是有很多人对这种制作方式不太了解。今天小编就跟大家分享下H5场景制作的5种风格，看看你心仪哪种。
+            .....
           </div>
         </a>
       </div>
@@ -129,7 +129,7 @@
           <div class="newTitleIcon"></div>
           <div class="border"></div>
           <div class="newContent">
-            2018年已经余额不足，各家企业也在开始筹备年会的相关事宜，全体员工齐聚一起，回顾过去，展望未来。年会通知，你还在使用通讯工具进行单调、乏味的文字通知形式吗？使用更潮流的通知方式——酷炫的H5年会邀请函，年会的喜庆气息会更浓厚，对于企业文化的发展也更有利。
+            增加了前端主页的联系栏
           </div>
         </a>
       </div>
